@@ -1,6 +1,7 @@
 # React Crash Course
 
 Objectives
+
 - Master React Fundamentals
 - Render Data
 - Handle Events
@@ -10,11 +11,11 @@ Objectives
 * Components: a piece of the UI
 * React builds many single, isolated components that when combined builds complex user interfaces
 
-|        | App     |       |      |
-| ------ | ------- | ----- | ---- |
-| NavBar | Profile | Trend | Feed |
-|        |         |       |  Tweet    |
-|        |         |       |    Like  |
+|        | App     |       |       |
+| ------ | ------- | ----- | ----- |
+| NavBar | Profile | Trend | Feed  |
+|        |         |       | Tweet |
+|        |         |       | Like  |
 
 ``` javascript
 class Tweet {
@@ -30,10 +31,11 @@ class Tweet {
 * React is a view library and Angular is a framework
 * React has different libraries and you choose which ones to use in your project.
 
-``` 
+``` bash
 $ npm i -g create-react-app
-$ create-react-app react-app
+$ npx create-react-app react-app
 ```
+
 Installs development server, web pack, Babel, and other tools
 
 ## npm commands
@@ -46,9 +48,9 @@ Installs development server, web pack, Babel, and other tools
 ## React pages
 
 * `App.js` has `class App extends Component` and `render()`
- `render()` contains HTML code like code, JSX (JavaScript XML)
-Babel then takes the JSX syntax and converts it to JS
-Babeljs.io/repl can see live conversion between JSX and JS
+  `render()` contains HTML code like code, JSX (JavaScript XML)
+  Babel then takes the JSX syntax and converts it to JS
+  Babeljs.io/repl can see live conversion between JSX and JS
 * `App.test.js` is for testing
 * `Index.js` is the entry point for the app
 * `registerServiceWorker.js `serves assets in local cache to PRD environment
@@ -85,6 +87,7 @@ Create a method and conditions to change `className` values dynamically and assi
 ## Rendering Lists
 
 React `render()` does not do loops for list items in the same way as Angular. You need to map an array.
+
 ```
 state = {
 	“tags”: [
@@ -117,12 +120,14 @@ Create `handleIncrement` to have what you want on click
 ## Binding Event Handlers
 
 `this` is not able to be accessed in `handleIncrement` You can create a `constructor()` to bind `this` to a method
+
 ```
 constructor() {
 	super();
 	this.handleIncrement = this.handleIncrement.bind(this);
 }
 ```
+
  Or you can make `handleIncrement` an arrow function
 `handleIncrement = () => {}`
 
