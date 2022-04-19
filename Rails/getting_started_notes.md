@@ -33,7 +33,7 @@ app/helpers/comments_helper.rb | A view helper file
 app/assets/javascripts/comments.coffee | CoffeeScript for the controller
 app/assets/stylesheets/comments.scss | Cascading style sheet for the controller
 
-Again, in our app, it generates Rspec tests.
+Again, in our app, it generates Rspec tests, and not coffee script but JavaScript
 
 
 ## Pluralize
