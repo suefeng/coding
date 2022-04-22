@@ -20,6 +20,8 @@ type | Specifies that the model uses Single Table Inheritance.
 (association_name)_type | Stores the type for polymorphic associations.
 (table_name)_count | Used to cache the number of belonging objects on associations. For example, a comments_count column in an Article class that has many instances of Comment will cache the number of existent comments for each article.
 
+[Optimistic locking](https://api.rubyonrails.org/v5.2.7/classes/ActiveRecord/Locking/Optimistic.html) allows multiple users to access the same record for edits, and assumes a minimum of conflicts with the data. It does this by checking whether another process has made changes to a record since it was opened, an ActiveRecord::StaleObjectError exception is thrown if that has occurred and the update is ignored.
+
 ## Overriding the Naming Conventions
 
 Sometimes you may use Rails with an existing database or want to use a different naming convention. You may define the overrides in the model class.
